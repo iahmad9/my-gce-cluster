@@ -89,7 +89,7 @@ sealedSecretsPrivateKey: ''
 # Do not edit manually, features can be enabled with
 # the corresponding 'wk <feature> enable' command
 enabledFeatures:
-  teamWorkspaces: false
+  teamWorkspaces: true
 #
 # EKS-specific configuration
 # (only required when `track` is set to `eks`)
