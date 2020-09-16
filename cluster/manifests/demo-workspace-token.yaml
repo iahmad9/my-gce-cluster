@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: github-token
+  namespace: wkp-workspaces
+spec:
+  encryptedData:
+    token: AgB/i4LCv6Sum9/KHZO0RuWEPa9jygAOFNKF0npaHGE5TdGPcxH8B7nYXcL3YtJVpBdaek6bYGdgLyqtXrt+gjiR9CdFVf2UlqXqtNiTdV9WaZFDzsvX6P8ACaB5m2pcmTg9pDy4HeUq6NoFDqEybo8a46B+RgU+S5FrSAUaUNYZWz3/ALa/ja/vi9KyeMOeJo8QWtfii87dV8u7ZyoIcMOvOCWmnS7hVgdrHfh5AZ8tBUm6ErOLKa1/wOvuB5sIGFJ2G3hnsSNHWpHAI0mUoLEMyL30qPVYeeAXyEalDdoQWak0I03QvOElTcJ64qDx66XgTy0H/zkTo9balV9wO3hRNzipLpO0/CSnKaq4aKmYIZ85CsJ32JcyOJtb+qeUMgVMZki3/92GJ0e20w/c8fkxN0uaRX7RFaj+gN+NDHa7ZF3d3kKUHvj02pZ38cI7DEa1vneLJ21o5SXM5CDGPehc1q2NukQrsz2Lu8XjTxX854TkVZx7uUxltnOw2XtbsbPO7l9h/waG9a8lRXiPuN0r/36rKnDftRab5EdRkI/AG4xqWTibEYhXHWo+cnaAGHjbQSARX0e2PzyGb0O7drsZtiVIaVG4A09kiHMOaV5VUSsQTkGtF1icTvUZYNXWJQjdAWqsHvzoswEsMSomomAQ5P40BmqUU8AKdkJRGYwHP+jM1iKranPazp+t9jI03pYokHGOFyiyjx3tRsdY3L9gc6V9B2wMvohByaz6X7+1q7PP5Q3ULIEL
+  template:
+    metadata:
+      creationTimestamp: null
+      name: github-token
+      namespace: wkp-workspaces
+status: {}
+
