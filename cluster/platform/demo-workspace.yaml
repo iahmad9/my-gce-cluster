@@ -1,0 +1,38 @@
+apiVersion: wkp.weave.works/v1alpha1
+kind: Workspace
+metadata:
+  name: demo
+  namespace: wkp-workspaces
+spec:
+  interval: 1m
+  suspend: false
+  gitProvider:
+    type: github
+    hostname: github.com
+    tokenRef:
+      name: github-token # the GitHub token created previously
+  gitRepository:
+    name: team-victor # <- specify repository name
+    owner: wkp-example-org # <- replace org with your GitHub organization
+    teams:
+      - team-victor # <- specify which teams should be given access to the repository (optional)
+  clusterScope:
+    role: namespace-admin
+    namespaces:
+      - name: my-demo-app # <- target namespace
+        resourceQuota: # <- optional field, defines a resource quota for namespace
+          hard:
+            requests.cpu: "1"
+            requests.memory: 1Gi
+            limits.cpu: "2"
+            limits.memory: 2Gi
+      - name: demo-db # <- another target namespace
+        limitRange:   # <- optional field, defines a limit range for namespace
+          limits:
+          - type: Container
+            max:
+              memory: 1Gi
+            min:
+              memory: 500Mi
+    networkPolicy: workspace-isolated # <- optional field, sets a predefined network policy in the target namespaces
+
