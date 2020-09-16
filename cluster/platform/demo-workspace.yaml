@@ -13,9 +13,7 @@ spec:
       name: github-token # the GitHub token created previously
   gitRepository:
     name: my-wkp-team # <- specify repository name
-    owner: wkp-example-org # <- replace org with your GitHub organization
-    teams:
-      - team-victor # <- specify which teams should be given access to the repository (optional)
+    owner: iahmad9 # <- replace org with your GitHub organization
   clusterScope:
     role: namespace-admin
     namespaces:
